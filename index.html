@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Explorer</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">Travel Explorer</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#places">Tourist Places</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Discover Amazing Destinations!</h1>
+    <p>Explore the world's most beautiful places.</p>
+  </section>
+
+  <!-- Tourist Places Section -->
+  <section id="places" class="places">
+    <h2>Popular Destinations</h2>
+    <div class="places-container">
+      <div class="place-card" onclick="showAlert('Paris, France')">
+        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=500&q=80" alt="Paris">
+        <h3>Paris</h3>
+        <p>City of lights and romance.</p>
+      </div>
+      <div class="place-card" onclick="showAlert('Maldives')">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80" alt="Maldives">
+        <h3>Maldives</h3>
+        <p>Paradise of turquoise waters.</p>
+      </div>
+      <div class="place-card" onclick="showAlert('Tokyo, Japan')">
+        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=500&q=80" alt="Tokyo">
+        <h3>Tokyo</h3>
+        <p>The heart of modern Japan.</p>
+      </div>
+      <div class="place-card" onclick="showAlert('New York, USA')">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=500&q=80" alt="New York">
+        <h3>New York</h3>
+        <p>The city that never sleeps.</p>
+      </div>
+      <!-- Add more as needed -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="return submitForm(event)">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div id="form-response"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
